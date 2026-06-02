@@ -1,0 +1,18 @@
+CREATE TABLE clientes (
+id SERIAL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+cnpj VARCHAR (18) NOT NULL,
+segmento VARCHAR (100) NOT NULL,
+cep VARCHAR (9) NOT NULL,
+endereco VARCHAR (255) NOT NULL,
+numero VARCHAR (255) NOT NULL,
+bairro VARCHAR (100) NOT NULL,
+cidade VARCHAR (100) NOT NULL,
+estado VARCHAR (100) NOT NULL
+);
+
+
+SHOW port;
+
+SELECT * FROM clientes
+
