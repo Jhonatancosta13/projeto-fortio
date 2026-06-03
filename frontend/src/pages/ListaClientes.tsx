@@ -27,7 +27,7 @@ export default function ListaClientes() {
   const [toast, setToast] = useState({ open: false, message: '', type: 'success' as 'success' | 'error' });
   const navigate = useNavigate();
 
-  // Estados para controlar o nosso novo Modal de Exclusão
+  
   const [modalAberto, setModalAberto] = useState(false);
   const [clienteParaDeletar, setClienteParaDeletar] = useState<number | null>(null);
 
@@ -138,7 +138,7 @@ export default function ListaClientes() {
                   <IconButton color="primary" onClick={() => navigate(`/cadastro/${cliente.id}`)} title="Editar">
                     <EditIcon />
                   </IconButton>
-                  {/* O botão agora chama a função que abre o Modal Bonito */}
+                  {/* O botão chama a função que abre o Modal */}
                   <IconButton color="error" onClick={() => cliqueDeletar(cliente.id)} title="Excluir">
                     <RemoveIcon sx={{ border: '2px solid', borderRadius: '50%', p: 0.2 }} />
                   </IconButton>
@@ -159,7 +159,7 @@ export default function ListaClientes() {
         </Table>
       </TableContainer>
 
-      {/* --- NOSSO NOVO MODAL DE EXCLUSÃO --- */}
+      {/*NOVO MODAL DE EXCLUSÃO*/}
       <Dialog
         open={modalAberto}
         onClose={fecharModal}

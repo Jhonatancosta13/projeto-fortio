@@ -8,7 +8,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { api } from '../services/api';
 
-// Funções de Máscara (Regex)
+
 const mascaraCNPJ = (valor: string) => {
   return valor
     .replace(/\D/g, '') 
@@ -104,7 +104,7 @@ export default function CadastroClientes() {
                 <TextField fullWidth label="CEP" name="cep" value={formData.cep} onChange={handleChange} required placeholder="00000-000" />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }}>
-                {/* Aqui está a correção com o slotProps para o Material UI v6 */}
+                
                 <TextField 
                   fullWidth 
                   label="Estado (UF)" 

@@ -10,18 +10,18 @@ import PeopleIcon from '@mui/icons-material/People';
 import ListaClientes from "./pages/ListaClientes";
 import CadastroClientes from "./pages/CadastroClientes";
 
-// 1. Configuração de Cores baseada na imagem
+
 const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#a855f7", // O roxo vibrante da imagem
+      main: "#a855f7", 
     },
     error: {
-      main: "#ef4444", // Vermelho intenso para o botão de excluir
+      main: "#ef4444", 
     },
     background: {
-      default: "transparent", // Transparente para o degradê aparecer
+      default: "transparent", 
     }
   },
   typography: {
@@ -30,7 +30,7 @@ const theme = createTheme({
 });
 
 function App() {
-  // Controle de abrir/fechar do Menu Lateral
+  
   const [menuAberto, setMenuAberto] = useState(false);
   const toggleMenu = () => setMenuAberto(!menuAberto);
 
@@ -49,7 +49,7 @@ function App() {
 
       <BrowserRouter>
 
-        {/* 3. CABEÇALHO ESCURO (Estilo BizBud) */}
+        {/* CABEÇALHO ESCURO*/}
         <AppBar position="static" elevation={0} sx={{ backgroundColor: '#111111', color: '#fff' }}>
           <Toolbar>
             {/* Ícone que abre a Barra Lateral */}
@@ -61,7 +61,7 @@ function App() {
               Fortio
             </Typography>
 
-            {/* Links Centrais (Visíveis apenas em telas maiores) */}
+            {/* Links Centrais*/}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, mr: 4 }}>
               <Typography variant="body2" sx={{ cursor: 'pointer', '&:hover': { color: '#a855f7' } }}>Início</Typography>
               <Typography variant="body2" sx={{ cursor: 'pointer', '&:hover': { color: '#a855f7' } }}>Serviços</Typography>
@@ -75,7 +75,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        {/* 4. BARRA LATERAL (Drawer) */}
+        {/* 4. BARRA LATERAL*/}
         <Drawer anchor="left" open={menuAberto} onClose={toggleMenu}>
           <Box sx={{ width: 260, pt: 2 }} onClick={toggleMenu}>
             <Typography variant="h6" sx={{ px: 2, pb: 2, fontWeight: 'bold', color: '#a855f7' }}>
@@ -83,7 +83,7 @@ function App() {
             </Typography>
             <List>
               <ListItem disablePadding>
-                {/* Ao clicar aqui, ele abre a tela de Listagem */}
+                {/* Ao clicar aqui abre a tela de Listagem */}
                 <ListItemButton component={Link} to="/clientes">
                   <ListItemIcon><PeopleIcon color="primary" /></ListItemIcon>
                   <ListItemText primary="Lista de Clientes" />
